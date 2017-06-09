@@ -1,5 +1,5 @@
 const DEFAULT_SUCCESS_HANDLER = value => value;
-const DEFAULT_REJECT = error => { throw error; }
+const DEFAULT_REJECT = error => { throw error; };
 
 const fastResolveAll = (args, success, failure) => {
   if (typeof success !== 'function') success = DEFAULT_SUCCESS_HANDLER;

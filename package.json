@@ -4,11 +4,14 @@
   "description": "Resolve a maybe-promise object as synchrously as posibble",
   "main": "index.js",
   "scripts": {
-    "test": "ava"
+    "lint": "eslint --fix .",
+    "test": "eslint . && ava"
   },
   "author": "YanagiEiichi <admin@web-tinker.com>",
   "license": "MIT",
   "devDependencies": {
-    "ava": "^0.19.1"
+    "ava": "^0.19.1",
+    "eslint": "^3.19.0",
+    "eslint-config-elemefe": "^0.3.0"
   }
 }
