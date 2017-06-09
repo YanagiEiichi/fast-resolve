@@ -1,0 +1,31 @@
+---
+  env:
+    es6: true
+    browser: true
+    node: true
+  ignore:
+    - node_modules
+  parserOptions:
+    ecmaVersion: 2017
+  globals:
+    Jinkela: false
+    UParams: false
+    API: false
+    presetGradients: false
+    plainTypes: false
+    dialog: false
+    moment: false
+    thriftParser: false
+    api: true
+    user: true
+    Click: true
+    Input: true
+    Panel: true
+    Frame: true
+    FramePrototype: true
+    DropdownPanel: true
+    Dropdown: true
+    PrivilegeManagerPanel: true
+  rules:
+    no-unused-vars: 0
+  extends: elemefe

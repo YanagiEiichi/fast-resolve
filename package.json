@@ -1,0 +1,14 @@
+{
+  "name": "fast-resolve",
+  "version": "0.1.0",
+  "description": "Resolve a maybe-promise object as synchrously as posibble",
+  "main": "index.js",
+  "scripts": {
+    "test": "ava"
+  },
+  "author": "YanagiEiichi <admin@web-tinker.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "ava": "^0.19.1"
+  }
+}
