@@ -21,7 +21,7 @@ const fastResolveAll = (args, success, failure) => {
       }
       return value;
     }, error => {
-      if (failure) {
+      if (typeof failure === 'function') {
         try {
           let result = failure(error);
           if (resolve) {
