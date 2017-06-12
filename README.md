@@ -13,7 +13,7 @@ Resolve a maybe-promise object as synchrously as posibble.
 
 #### fastResolveAll(array, success, failure)
 
-* `array` is a array of maybe-promise object.
+* `array` is an array of maybe-promise object.
 * `success` is a function. 
 * `failure` is a function.
 * return a maybe-promise object.
