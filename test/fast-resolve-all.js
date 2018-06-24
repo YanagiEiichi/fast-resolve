@@ -33,7 +33,7 @@ ava('async rejected value in values', t => {
     Promise.resolve(3)
   ], () => {
     throw new Error('wtf');
-  }, value => {
+  }, () => {
     return 'ok';
   });
   return value.then(value => {

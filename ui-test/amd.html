@@ -1,0 +1,29 @@
+<script src="/tester.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/requirejs@2.3.5/require.js"></script>
+<script>
+require([ '/umd.js' ], FastResolve => {
+
+  Tester.assert(typeof FastResolve === 'object');
+  let { fastResolve, fastResolveAll } = FastResolve;
+  Tester.assert(typeof fastResolve === 'function');
+  Tester.assert(typeof fastResolveAll === 'function');
+
+  let exp = new Tester.Expection(1, 2, 3);
+
+  fastResolveAll([
+    fastResolve(1, (e) => {
+      exp.answer(e);
+      return e;
+    }),
+    fastResolve(Promise.resolve(2), (e) => {
+      exp.answer(e);
+      return e;
+    })
+  ], ([ a, b ]) => {
+    exp.answer(a + b);
+  });
+
+  Tester.feedback(exp);
+
+});
+</script>

@@ -1,17 +1,20 @@
 {
   "name": "fast-resolve",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Resolve a maybe-promise object as synchrously as posibble",
   "main": "index.js",
   "scripts": {
     "lint": "eslint --fix .",
-    "test": "eslint . && ava"
+    "test": "eslint . && ava && ui-tester-start ui-test",
+    "prepublish": "browserify index.js -s FastResolve -o umd.js"
   },
   "author": "YanagiEiichi <admin@web-tinker.com>",
   "license": "MIT",
   "devDependencies": {
     "ava": "^0.19.1",
+    "browserify": "^16.2.2",
     "eslint": "^3.19.0",
-    "eslint-config-elemefe": "^0.3.0"
+    "eslint-config-elemefe": "^0.3.0",
+    "ui-tester": "^1.1.4"
   }
 }

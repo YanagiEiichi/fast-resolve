@@ -1,0 +1,25 @@
+<script src="/umd.js"></script>
+<script src="/tester.js"></script>
+<script>
+Tester.assert(typeof FastResolve === 'object');
+let { fastResolve, fastResolveAll } = FastResolve;
+Tester.assert(typeof fastResolve === 'function');
+Tester.assert(typeof fastResolveAll === 'function');
+
+let exp = new Tester.Expection(1, 2, 3);
+
+fastResolveAll([
+  fastResolve(1, (e) => {
+    exp.answer(e);
+    return e;
+  }),
+  fastResolve(Promise.resolve(2), (e) => {
+    exp.answer(e);
+    return e;
+  })
+], ([ a, b ]) => {
+  exp.answer(a + b);
+});
+
+Tester.feedback(exp);
+</script>

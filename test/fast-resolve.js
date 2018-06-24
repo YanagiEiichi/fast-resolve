@@ -24,7 +24,7 @@ ava('async value', t => {
 
 ava('sync success handler error', t => {
   try {
-    fastResolve(1, value => {
+    fastResolve(1, () => {
       throw new Error('hehe');
     });
   } catch (error) {
